@@ -8,12 +8,12 @@ from bokeh.embed import server_document
 app = Flask(__name__)
 
 # render the template
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     
-    vggm = server_document(url="http://0.0.0.0:5006/map")
+    vggm = server_document(url="http://127.0.0.1:5006/map")
 
     return render_template("index.html", vggm=vggm)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0")
