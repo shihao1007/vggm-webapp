@@ -11,7 +11,14 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     
+    print("BEFORE bokeh server_document")
     vggm = server_document(url="http://localhost:5006/map")
+    print()
+    print("AFTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print(vggm)
+    print()
+    print()
+    print("******************************************")
 
     return render_template("index.html", vggm=vggm)
 
