@@ -4,6 +4,6 @@ RUN conda install -y bokeh flask pandas nltk
 
 VOLUME '/app'
 
-EXPOSE 5000
+EXPOSE 80
 
 ENTRYPOINT ["python", "/app/webapp/app.py"]
