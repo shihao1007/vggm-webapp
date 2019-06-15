@@ -10,4 +10,4 @@ EXPOSE 5006
 
 #CMD bokeh serve --allow-websocket-origin=3.16.26.212:80 --allow-websocket-origin=127.0.0.1:5000 --allow-websocket-origin=0.0.0.0:5000 --allow-websocket-origin=0.0.0.0:80 /app/bokehapp/map.py
 
-CMD bokeh serve --allow-websocket-origin=* /app/bokehapp/map.py
+CMD bokeh serve /app/bokehapp/map.py

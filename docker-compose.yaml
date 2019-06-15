@@ -10,7 +10,7 @@ services:
     volumes:
       - './:/app'
     ports:
-      - '80:5000'
+      - '5000:5000'
   bokehapp:
     env_file:
       - 'variables.env'
