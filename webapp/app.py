@@ -8,16 +8,12 @@ from bokeh.embed import server_document
 app = Flask(__name__)
 
 # render the template
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     
-    with pull_session(url="http://localhost:5006/map") as session:
+    vggm = server_document(url="http://localhost:5006/map")
 
-        # generate a script to load the customized session
-        script = server_session(session_id=session.id, url='http://localhost:5006/map')
-
-        # use the script in the rendered page
-        return render_template("index.html", vggm=vggm, template="Flask")
+    return render_template("index.html", vggm=vggm)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
