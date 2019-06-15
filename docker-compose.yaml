@@ -20,6 +20,6 @@ services:
     depends_on:
       - flaskapp
     ports:
-      - '80:5006'
+      - '5000:5006'
     volumes:
       - './:/app'
