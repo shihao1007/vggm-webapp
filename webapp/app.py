@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     
-    vggm = server_document(url="http://localhost:5006/map")
+    vggm = server_document(url="http://0.0.0.0:5006/map")
 
     return render_template("index.html", vggm=vggm)
 

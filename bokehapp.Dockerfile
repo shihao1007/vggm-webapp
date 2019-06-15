@@ -6,6 +6,6 @@ VOLUME '/app'
 
 EXPOSE 5006
 
-#ENTRYPOINT ["bokeh", "serve", "/app/bokehapp/map.py", "--allow-websocket-origin=3.16.213.22:5006", "--address=0.0.0.0"]
+#ENTRYPOINT ["bokeh", "serve", "/app/bokehapp/map.py", "--allow-websocket-origin=18.222.239.0:5006", "--address=0.0.0.0"]
 
 CMD bokeh serve --address=0.0.0.0 /app/bokehapp/map.py 
