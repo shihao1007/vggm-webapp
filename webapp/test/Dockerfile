@@ -14,4 +14,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD bokeh serve --allow-websocket-origin=18.222.239.0 map.py
+CMD bokeh serve --allow-websocket-origin=3.16.26.212 map.py
