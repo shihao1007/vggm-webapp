@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def bkapp_page():
-    script = server_document('http://localhost:5006/map')
+    vggm = server_document('http://localhost:5006/map')
     return render_template("index.html", vggm=vggm, template="Flask")
 
 
