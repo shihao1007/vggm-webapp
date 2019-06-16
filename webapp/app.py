@@ -14,6 +14,7 @@ app = Flask(__name__)
 def index():
 
     vggm = server_document(url="http://" + IP + ":5006/map")
+    print(vggm)
 
     return render_template("index.html", vggm=vggm)
 
