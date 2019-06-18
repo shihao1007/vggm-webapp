@@ -5,7 +5,6 @@ from bokeh.client import pull_session
 from bokeh.embed import server_document
 import sys, os
 
-IP = os.environ["BK_IP"]
 # instantiate the app
 app = Flask(__name__)
 
@@ -13,7 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    vggm = server_document(url="http://" + IP + ":5000/map")
+    vggm = server_document(url="18.216.235.60:88/map")
     print(vggm)
 
     return render_template("index.html", vggm=vggm)
