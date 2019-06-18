@@ -4,6 +4,6 @@ RUN conda install -y bokeh numpy pandas nltk
 
 VOLUME '/app'
 
-EXPOSE 88
+EXPOSE 5006
 
 CMD bokeh serve --allow-websocket-origin=* /app/bokehapp/map.py

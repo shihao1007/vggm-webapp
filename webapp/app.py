@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    vggm = server_document(url="18.216.235.60:88/map")
+    vggm = server_document(url="18.216.235.60:5006/map")
     print(vggm)
 
     return render_template("index.html", vggm=vggm)
